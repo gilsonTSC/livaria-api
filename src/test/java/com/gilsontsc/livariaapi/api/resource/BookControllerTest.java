@@ -23,6 +23,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gilsontsc.livariaapi.api.dto.BookDTO;
+import com.gilsontsc.livariaapi.exception.BusinessException;
 import com.gilsontsc.livariaapi.model.entity.Book;
 import com.gilsontsc.livariaapi.service.BookService;
 
@@ -87,5 +88,32 @@ public class BookControllerTest {
 			.andExpect(status().isBadRequest())
 			.andExpect(jsonPath("errors", hasSize(3)));
 	}
+	
+	@Test
+    @DisplayName("Deve lançar erro ao tentar cadastrar um livro com isbn já utilizado por outro.")
+    public void createBookWithDuplicatedIsbn() throws Exception {
+        BookDTO dto = createNewBook();
+        String json = new ObjectMapper().writeValueAsString(dto);
+        String mensagemErro = "Isbn já cadastrado.";
+        
+        BDDMockito.given(service.save(Mockito.any(Book.class)))
+                    .willThrow(new BusinessException(mensagemErro));
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+									                .post(BOOK_API)
+									                .contentType(MediaType.APPLICATION_JSON)
+									                .accept(MediaType.APPLICATION_JSON)
+									                .content(json);
+
+        mvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("errors", hasSize(1)))
+                .andExpect(jsonPath("errors[0]").value(mensagemErro));
+
+    }
+
+	private BookDTO createNewBook() {
+        return BookDTO.builder().author("Artur").title("As aventuras").isbn("001").build();
+    }
 	
 }

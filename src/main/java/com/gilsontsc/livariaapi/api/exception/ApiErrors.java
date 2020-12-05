@@ -1,9 +1,12 @@
 package com.gilsontsc.livariaapi.api.exception;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.validation.BindingResult;
+
+import com.gilsontsc.livariaapi.exception.BusinessException;
 
 
 public class ApiErrors {
@@ -17,6 +20,10 @@ public class ApiErrors {
 		});
 	}
 	
+	public ApiErrors(BusinessException ex) {
+		this.errors = Arrays.asList(ex.getMessage());
+	}
+
 	public List<String> getErrors(){
 		return this.errors;
 	}

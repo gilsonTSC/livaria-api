@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.gilsontsc.livariaapi.api.dto.BookDTO;
 import com.gilsontsc.livariaapi.api.exception.ApiErrors;
+import com.gilsontsc.livariaapi.exception.BusinessException;
 import com.gilsontsc.livariaapi.model.entity.Book;
 import com.gilsontsc.livariaapi.service.BookService;
 
@@ -45,4 +46,11 @@ public class BookController {
 		BindingResult bindingResult = ex.getBindingResult();
 		return new ApiErrors(bindingResult);
 	}
+	
+	@ExceptionHandler(BusinessException.class)
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	public ApiErrors handleBusinessException(BusinessException ex) {
+		return new ApiErrors(ex);
+	}
+	
 }
