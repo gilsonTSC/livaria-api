@@ -8,4 +8,6 @@ import com.gilsontsc.livariaapi.model.entity.Book;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long>{
 
+	boolean existsByIsbn( String isbn );
+
 }
