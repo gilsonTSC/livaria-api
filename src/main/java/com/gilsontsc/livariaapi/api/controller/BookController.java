@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.gilsontsc.livariaapi.api.dto.BookDTO;
 import com.gilsontsc.livariaapi.api.exception.ApiErrors;
@@ -45,7 +46,8 @@ public class BookController {
 	@GetMapping("{id}")
     public BookDTO get(@PathVariable Long id){
         return service.getById(id)
-                .map(book -> modelMapper.map(book, BookDTO.class)).get();
+                .map(book -> modelMapper.map(book, BookDTO.class))
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
