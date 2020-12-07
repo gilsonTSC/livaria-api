@@ -1,5 +1,7 @@
 package com.gilsontsc.livariaapi.service.impl;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import com.gilsontsc.livariaapi.exception.BusinessException;
@@ -22,6 +24,11 @@ public class BookServiceImpl implements BookService {
 			throw new BusinessException("Isbn já cadastrado.");
 		}
 		return repository.save(book);
+	}
+
+	@Override
+	public Optional<Book> getById(Long id) {
+		return null;
 	}
 
 }
