@@ -2,6 +2,8 @@ package com.gilsontsc.livariaapi.model.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -50,6 +52,20 @@ public class BookRepositoryTest {
 
         //verificacao
         assertThat(exists).isFalse();
+    }
+    
+    @Test
+    @DisplayName("Deve obter um livro por id.")
+    public void findByIdTest(){
+        //cenário
+        Book book = createNewBook("123");
+        entityManager.persist(book);
+
+        //execucao
+        Optional<Book> foundBook = repository.findById(book.getId());
+
+        //verificacoes
+        assertThat(foundBook.isPresent()).isTrue();
     }
     
     public static Book createNewBook(String isbn) {
