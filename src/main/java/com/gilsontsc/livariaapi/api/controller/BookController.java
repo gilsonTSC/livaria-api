@@ -11,10 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,8 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.gilsontsc.livariaapi.api.dto.BookDTO;
-import com.gilsontsc.livariaapi.api.exception.ApiErrors;
-import com.gilsontsc.livariaapi.exception.BusinessException;
 import com.gilsontsc.livariaapi.model.entity.Book;
 import com.gilsontsc.livariaapi.service.BookService;
 
@@ -65,13 +60,6 @@ public class BookController {
         service.delete(book);
     }
 	
-	@ExceptionHandler(MethodArgumentNotValidException.class)
-	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	public ApiErrors handleValidationException(MethodArgumentNotValidException ex) {
-		BindingResult bindingResult = ex.getBindingResult();
-		return new ApiErrors(bindingResult);
-	}
-	
 	@PutMapping("{id}")
     public BookDTO update(@PathVariable Long id, @RequestBody @Valid BookDTO dto){
         return service.getById(id).map( book -> {
@@ -93,11 +81,5 @@ public class BookController {
 
         return new PageImpl<BookDTO>(list, pageRequest, result.getTotalElements());
     }
-	
-	@ExceptionHandler(BusinessException.class)
-	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	public ApiErrors handleBusinessException(BusinessException ex) {
-		return new ApiErrors(ex);
-	}
 	
 }
