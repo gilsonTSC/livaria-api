@@ -2,6 +2,8 @@ package com.gilsontsc.livariaapi.service.impl;
 
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.gilsontsc.livariaapi.exception.BusinessException;
@@ -45,6 +47,11 @@ public class BookServiceImpl implements BookService {
 			throw new IllegalArgumentException("Book null.");
 		}
 		return this.repository.save(book);
+	}
+
+	@Override
+	public Page<Book> find(Book book, Pageable pagerequest) {
+		return null;
 	}
 
 }
