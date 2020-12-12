@@ -30,6 +30,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gilsontsc.livariaapi.api.controller.BookController;
 import com.gilsontsc.livariaapi.api.dto.BookDTO;
 import com.gilsontsc.livariaapi.exception.BusinessException;
 import com.gilsontsc.livariaapi.model.entity.Book;
@@ -37,7 +38,7 @@ import com.gilsontsc.livariaapi.service.BookService;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-@WebMvcTest
+@WebMvcTest(controllers = BookController.class)
 @AutoConfigureMockMvc
 public class BookControllerTest {
 
