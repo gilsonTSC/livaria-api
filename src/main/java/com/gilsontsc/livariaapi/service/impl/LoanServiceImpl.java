@@ -1,5 +1,7 @@
 package com.gilsontsc.livariaapi.service.impl;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import com.gilsontsc.livariaapi.exception.BusinessException;
@@ -22,6 +24,16 @@ public class LoanServiceImpl implements LoanService{
 			throw new BusinessException("Livro já empréstado");
 		}
 		return this.repository.save(loan);
+	}
+
+	@Override
+	public Optional<Loan> getById(long loan) {
+		return null;
+	}
+
+	@Override
+	public Loan update(Loan loan) {
+		return null;
 	}
 
 }
