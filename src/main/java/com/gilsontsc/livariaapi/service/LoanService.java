@@ -8,7 +8,7 @@ public interface LoanService {
 
 	Loan save(Loan loan);
 
-	Optional<Loan> getById(long loan);
+	Optional<Loan> getById(long id);
 
 	Loan update(Loan loan);
 
