@@ -2,8 +2,11 @@ package com.gilsontsc.livariaapi.service.impl;
 
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.gilsontsc.livariaapi.api.dto.LoanFilterDTO;
 import com.gilsontsc.livariaapi.exception.BusinessException;
 import com.gilsontsc.livariaapi.model.entity.Loan;
 import com.gilsontsc.livariaapi.model.repository.LoanRepository;
@@ -34,6 +37,11 @@ public class LoanServiceImpl implements LoanService{
 	@Override
 	public Loan update(Loan loan) {
 		return this.repository.save(loan);
+	}
+
+	@Override
+	public Page<Loan> find(LoanFilterDTO filterDTO, Pageable pageable) {
+		return null;
 	}
 
 }
