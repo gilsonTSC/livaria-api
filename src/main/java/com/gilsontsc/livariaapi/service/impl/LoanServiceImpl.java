@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.gilsontsc.livariaapi.api.dto.LoanFilterDTO;
 import com.gilsontsc.livariaapi.exception.BusinessException;
+import com.gilsontsc.livariaapi.model.entity.Book;
 import com.gilsontsc.livariaapi.model.entity.Loan;
 import com.gilsontsc.livariaapi.model.repository.LoanRepository;
 import com.gilsontsc.livariaapi.service.LoanService;
@@ -42,6 +43,11 @@ public class LoanServiceImpl implements LoanService{
 	@Override
 	public Page<Loan> find(LoanFilterDTO filterDTO, Pageable pageable) {
 		return repository.findByBookIsbnOrCustomer(filterDTO.getIsbn(), filterDTO.getCustomer(), pageable);
+	}
+
+	@Override
+	public Page<Loan> getLoansByBook(Book book, Pageable pageable) {
+		return repository.findByBook(book, pageable);
 	}
 
 }

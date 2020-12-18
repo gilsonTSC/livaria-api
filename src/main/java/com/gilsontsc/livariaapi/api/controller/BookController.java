@@ -23,8 +23,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.gilsontsc.livariaapi.api.dto.BookDTO;
+import com.gilsontsc.livariaapi.api.dto.LoanDTO;
 import com.gilsontsc.livariaapi.model.entity.Book;
+import com.gilsontsc.livariaapi.model.entity.Loan;
 import com.gilsontsc.livariaapi.service.BookService;
+import com.gilsontsc.livariaapi.service.LoanService;
 
 @RestController
 @RequestMapping("api/books")
@@ -35,6 +38,9 @@ public class BookController {
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	@Autowired
+	private LoanService loanService;
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
@@ -81,5 +87,21 @@ public class BookController {
 
         return new PageImpl<BookDTO>(list, pageRequest, result.getTotalElements());
     }
+	
+	@GetMapping("{id}/loans")
+	public Page<LoanDTO> loansByBook(@PathVariable Long id, Pageable pageable){
+		Book book = service.getById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        Page<Loan> result = loanService.getLoansByBook(book, pageable);
+        List<LoanDTO> list = result.getContent()
+                .stream()
+                .map(loan -> {
+                    Book loanBook = loan.getBook();
+                    BookDTO bookDTO = modelMapper.map(loanBook, BookDTO.class);
+                    LoanDTO loanDTO = modelMapper.map(loan, LoanDTO.class);
+                    loanDTO.setBook(bookDTO);
+                    return loanDTO;
+                }).collect(Collectors.toList());
+        return new PageImpl<LoanDTO>(list, pageable, result.getTotalElements());
+	}
 	
 }
