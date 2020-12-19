@@ -28,11 +28,16 @@ import com.gilsontsc.livariaapi.model.entity.Loan;
 import com.gilsontsc.livariaapi.service.BookService;
 import com.gilsontsc.livariaapi.service.LoanService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("api/loans")
 @RequiredArgsConstructor
+@Api("Empréstimo API")
 public class LoanController {
 
 	private final LoanService service;
@@ -41,6 +46,12 @@ public class LoanController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @ApiOperation("Criar empréstimo")
+	@ApiResponses({
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public Long create(@RequestBody LoanDTO dto) {
         Book book = bookService
                 .getBookByIsbn(dto.getIsbn())
@@ -57,6 +68,13 @@ public class LoanController {
     }
     
     @PatchMapping("{id}")
+    @ApiOperation("Atualizar emp´restimo por id")
+	@ApiResponses({
+		@ApiResponse(code = 200, message = "Ok"),
+		@ApiResponse(code = 204, message = "Atualizado"),
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public void returnBook(@PathVariable Long id, @RequestBody ReturnedLoanDTO dto) {
         Loan loan = service.getById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
         loan.setReturned(dto.getReturned());
@@ -64,6 +82,12 @@ public class LoanController {
     }
     
     @GetMapping
+    @ApiOperation("Obter empréstimo por id")
+	@ApiResponses({
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public Page<LoanDTO> find(LoanFilterDTO dto, Pageable pageRequest) {
         Page<Loan> result = service.find(dto, pageRequest);
         List<LoanDTO> loans = result

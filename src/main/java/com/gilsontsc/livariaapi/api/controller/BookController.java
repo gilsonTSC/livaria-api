@@ -29,8 +29,14 @@ import com.gilsontsc.livariaapi.model.entity.Loan;
 import com.gilsontsc.livariaapi.service.BookService;
 import com.gilsontsc.livariaapi.service.LoanService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping("api/books")
+@Api("Livro API")
 public class BookController {
 
 	@Autowired
@@ -44,6 +50,12 @@ public class BookController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation("Criar livro")
+	@ApiResponses({
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
 	public BookDTO create(@RequestBody @Valid BookDTO dto) {
 		Book entity = modelMapper.map(dto, Book.class);
 		
@@ -53,6 +65,12 @@ public class BookController {
 	}
 	
 	@GetMapping("{id}")
+	@ApiOperation("Obter livro por id")
+	@ApiResponses({
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public BookDTO get(@PathVariable Long id){
         return service.getById(id)
                 .map(book -> modelMapper.map(book, BookDTO.class))
@@ -61,12 +79,25 @@ public class BookController {
 	
 	@DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
+	@ApiOperation("Deletar livro por id")
+	@ApiResponses({
+		@ApiResponse(code = 204, message = "Livro deletado com sucesso"),
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public void delete(@PathVariable Long id){
         Book book = service.getById(id).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND) );
         service.delete(book);
     }
 	
 	@PutMapping("{id}")
+	@ApiOperation("Atualizar livro por id")
+	@ApiResponses({
+		@ApiResponse(code = 201, message = "Atualizado"),
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public BookDTO update(@PathVariable Long id, @RequestBody @Valid BookDTO dto){
         return service.getById(id).map( book -> {
             book.setAuthor(dto.getAuthor());
@@ -77,6 +108,12 @@ public class BookController {
     }
 	
 	@GetMapping
+	@ApiOperation("Buscar livro por parâmetros")
+	@ApiResponses({
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
     public Page<BookDTO> find(BookDTO dto, Pageable pageRequest){
         Book filter = modelMapper.map(dto, Book.class);
         Page<Book> result = service.find(filter, pageRequest);
@@ -89,6 +126,12 @@ public class BookController {
     }
 	
 	@GetMapping("{id}/loans")
+	@ApiOperation("Buscar empréstimos do livro")
+	@ApiResponses({
+		@ApiResponse(code = 401, message = "Não autorizado"),
+		@ApiResponse(code = 404, message = "Não encontrado"),
+		@ApiResponse(code = 403, message = "Acesso negado")
+	})
 	public Page<LoanDTO> loansByBook(@PathVariable Long id, Pageable pageable){
 		Book book = service.getById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
         Page<Loan> result = loanService.getLoansByBook(book, pageable);

@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ScheduleService {
 
-	private static final String CRON_LATE_LOANS = "0 0 01/1 * ?";
+	private static final String CRON_LATE_LOANS = "0 0 0 1/1 * ?";
 	
 	@Value("${application.mail.lateloans.message}")
 	private String mensagem;
