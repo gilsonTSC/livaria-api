@@ -33,10 +33,12 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("api/books")
 @Api("Livro API")
+@Slf4j
 public class BookController {
 
 	@Autowired
@@ -57,6 +59,8 @@ public class BookController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
 	public BookDTO create(@RequestBody @Valid BookDTO dto) {
+		log.info("Criando livro para o isbn: " + dto.getIsbn());
+		
 		Book entity = modelMapper.map(dto, Book.class);
 		
 		entity = service.save(entity);
@@ -72,6 +76,7 @@ public class BookController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
     public BookDTO get(@PathVariable Long id){
+		log.info("Obtendo livro com o id: " + id);
         return service.getById(id)
                 .map(book -> modelMapper.map(book, BookDTO.class))
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
@@ -86,6 +91,7 @@ public class BookController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
     public void delete(@PathVariable Long id){
+		log.info("Deletando livro com o id: " + id);
         Book book = service.getById(id).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND) );
         service.delete(book);
     }
@@ -99,6 +105,7 @@ public class BookController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
     public BookDTO update(@PathVariable Long id, @RequestBody @Valid BookDTO dto){
+		log.info("Atualizando livro com o id: " + id);
         return service.getById(id).map( book -> {
             book.setAuthor(dto.getAuthor());
             book.setTitle(dto.getTitle());

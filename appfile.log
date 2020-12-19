@@ -1,0 +1,217 @@
+2020-12-19 12:32:02.391  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Starting LivariaApiApplication on DESKTOP-5370L5E with PID 24736 (C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api\target\classes started by Estudo in C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api)
+2020-12-19 12:32:02.393  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : No active profile set, falling back to default profiles: default
+2020-12-19 12:32:02.431  INFO 24736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-19 12:32:02.431  INFO 24736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-19 12:32:03.552  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-19 12:32:03.610  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 2 JPA repository interfaces.
+2020-12-19 12:32:04.092  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-19 12:32:04.098  INFO 24736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-19 12:32:04.098  INFO 24736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-19 12:32:04.186  INFO 24736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-19 12:32:04.186  INFO 24736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1728 ms
+2020-12-19 12:32:04.300  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-19 12:32:04.441  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-19 12:32:04.446  INFO 24736 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-12-19 12:32:04.614  INFO 24736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-19 12:32:04.647  INFO 24736 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-12-19 12:32:04.740  INFO 24736 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-19 12:32:04.827  INFO 24736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-19 12:32:05.380  INFO 24736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-19 12:32:05.386  INFO 24736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:32:05.418  INFO 24736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-19 12:32:06.861  WARN 24736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-19 12:32:07.064  INFO 24736 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-12-19 12:32:07.208  INFO 24736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:32:07.596  INFO 24736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-12-19 12:32:07.648  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-12-19 12:32:07.676  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-12-19 12:32:07.688  INFO 24736 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-12-19 12:32:07.927  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-12-19 12:32:07.932  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findUsingGET_1
+2020-12-19 12:32:08.078  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-19 12:32:08.080  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Started LivariaApiApplication in 5.981 seconds (JVM running for 6.813)
+2020-12-19 12:32:08.818  INFO 24736 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-19 12:32:08.819  INFO 24736 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-19 12:32:08.829  INFO 24736 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-12-19 12:34:39.655  INFO 24736 --- [Thread-7] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-12-19 12:34:39.658  INFO 24736 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:34:39.661  INFO 24736 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:34:39.662  INFO 24736 --- [Thread-7] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-12-19 12:34:40.076  WARN 24736 --- [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-12-19 12:34:40.076  INFO 24736 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-19 12:34:40.078  INFO 24736 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-19 12:34:40.607  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Starting LivariaApiApplication on DESKTOP-5370L5E with PID 24736 (C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api\target\classes started by Estudo in C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api)
+2020-12-19 12:34:40.608  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : No active profile set, falling back to default profiles: default
+2020-12-19 12:34:41.030  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-19 12:34:41.051  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 2 JPA repository interfaces.
+2020-12-19 12:34:41.199  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-19 12:34:41.199  INFO 24736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-19 12:34:41.200  INFO 24736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-19 12:34:41.216  INFO 24736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-19 12:34:41.216  INFO 24736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 606 ms
+2020-12-19 12:34:41.248  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-12-19 12:34:41.250  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-12-19 12:34:41.250  INFO 24736 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-12-19 12:34:41.299  INFO 24736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-19 12:34:41.304  INFO 24736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-19 12:34:41.350  INFO 24736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-19 12:34:41.351  INFO 24736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:34:41.363  INFO 24736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-19 12:34:41.527  WARN 24736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-19 12:34:41.604  INFO 24736 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-12-19 12:34:41.655  INFO 24736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:34:41.720  INFO 24736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-12-19 12:34:41.746  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-12-19 12:34:41.747  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-12-19 12:34:41.751  INFO 24736 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-12-19 12:34:41.796  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-12-19 12:34:41.801  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findUsingGET_1
+2020-12-19 12:34:41.817  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-19 12:34:41.818  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Started LivariaApiApplication in 1.239 seconds (JVM running for 160.552)
+2020-12-19 12:34:41.822  INFO 24736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-19 12:35:28.524  INFO 24736 --- [Thread-15] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-12-19 12:35:28.526  INFO 24736 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:35:28.528  INFO 24736 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:35:28.529  INFO 24736 --- [Thread-15] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-12-19 12:35:28.735  WARN 24736 --- [Thread-15] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-12-19 12:35:28.735  INFO 24736 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-12-19 12:35:28.738  INFO 24736 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-12-19 12:35:29.392  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Starting LivariaApiApplication on DESKTOP-5370L5E with PID 24736 (C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api\target\classes started by Estudo in C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api)
+2020-12-19 12:35:29.392  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : No active profile set, falling back to default profiles: default
+2020-12-19 12:35:29.965  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-19 12:35:29.999  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 2 JPA repository interfaces.
+2020-12-19 12:35:30.215  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-19 12:35:30.216  INFO 24736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-19 12:35:30.216  INFO 24736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-19 12:35:30.248  INFO 24736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-19 12:35:30.248  INFO 24736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 853 ms
+2020-12-19 12:35:30.297  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-12-19 12:35:30.299  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-12-19 12:35:30.300  INFO 24736 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-12-19 12:35:30.372  INFO 24736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-19 12:35:30.382  INFO 24736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-19 12:35:30.450  INFO 24736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-19 12:35:30.450  INFO 24736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:35:30.468  INFO 24736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-19 12:35:30.683  WARN 24736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-19 12:35:30.799  INFO 24736 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-12-19 12:35:30.871  INFO 24736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:35:30.936  INFO 24736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-12-19 12:35:30.962  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-12-19 12:35:30.964  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-12-19 12:35:30.966  INFO 24736 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-12-19 12:35:31.015  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-12-19 12:35:31.020  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findUsingGET_1
+2020-12-19 12:35:31.039  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-19 12:35:31.040  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Started LivariaApiApplication in 1.686 seconds (JVM running for 209.773)
+2020-12-19 12:35:31.044  INFO 24736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-19 12:36:59.680  INFO 24736 --- [Thread-23] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-12-19 12:36:59.684  INFO 24736 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:36:59.688  INFO 24736 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:36:59.689  INFO 24736 --- [Thread-23] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-12-19 12:36:59.898  WARN 24736 --- [Thread-23] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-12-19 12:36:59.898  INFO 24736 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-12-19 12:36:59.901  INFO 24736 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-12-19 12:37:00.431  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Starting LivariaApiApplication on DESKTOP-5370L5E with PID 24736 (C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api\target\classes started by Estudo in C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api)
+2020-12-19 12:37:00.431  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : No active profile set, falling back to default profiles: default
+2020-12-19 12:37:00.847  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-19 12:37:00.870  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 2 JPA repository interfaces.
+2020-12-19 12:37:01.017  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-19 12:37:01.017  INFO 24736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-19 12:37:01.017  INFO 24736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-19 12:37:01.032  INFO 24736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-19 12:37:01.033  INFO 24736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 599 ms
+2020-12-19 12:37:01.067  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-12-19 12:37:01.069  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-12-19 12:37:01.069  INFO 24736 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-12-19 12:37:01.130  INFO 24736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-19 12:37:01.135  INFO 24736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-19 12:37:01.186  INFO 24736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-19 12:37:01.186  INFO 24736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:37:01.199  INFO 24736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-19 12:37:01.334  WARN 24736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-19 12:37:01.402  INFO 24736 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-12-19 12:37:01.451  INFO 24736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:37:01.521  INFO 24736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-12-19 12:37:01.546  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-12-19 12:37:01.547  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-12-19 12:37:01.549  INFO 24736 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-12-19 12:37:01.592  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-12-19 12:37:01.599  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findUsingGET_1
+2020-12-19 12:37:01.613  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-19 12:37:01.614  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Started LivariaApiApplication in 1.208 seconds (JVM running for 300.348)
+2020-12-19 12:37:01.616  INFO 24736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-19 12:39:38.584  INFO 24736 --- [Thread-30] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-12-19 12:39:38.586  INFO 24736 --- [Thread-30] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:39:38.588  INFO 24736 --- [Thread-30] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:39:38.588  INFO 24736 --- [Thread-30] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-12-19 12:39:38.798  WARN 24736 --- [Thread-30] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-12-19 12:39:38.798  INFO 24736 --- [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-12-19 12:39:38.800  INFO 24736 --- [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-12-19 12:39:39.345  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Starting LivariaApiApplication on DESKTOP-5370L5E with PID 24736 (C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api\target\classes started by Estudo in C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api)
+2020-12-19 12:39:39.345  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : No active profile set, falling back to default profiles: default
+2020-12-19 12:39:39.700  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-19 12:39:39.718  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 2 JPA repository interfaces.
+2020-12-19 12:39:39.838  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-19 12:39:39.839  INFO 24736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-19 12:39:39.839  INFO 24736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-19 12:39:39.851  INFO 24736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-19 12:39:39.852  INFO 24736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 505 ms
+2020-12-19 12:39:39.884  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-12-19 12:39:39.886  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-12-19 12:39:39.886  INFO 24736 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-12-19 12:39:39.933  INFO 24736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-19 12:39:39.936  INFO 24736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-19 12:39:39.971  INFO 24736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-19 12:39:39.971  INFO 24736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:39:39.980  INFO 24736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-19 12:39:40.101  WARN 24736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-19 12:39:40.164  INFO 24736 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-12-19 12:39:40.209  INFO 24736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:39:40.260  INFO 24736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-12-19 12:39:40.283  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-12-19 12:39:40.284  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-12-19 12:39:40.286  INFO 24736 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-12-19 12:39:40.316  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-12-19 12:39:40.321  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findUsingGET_1
+2020-12-19 12:39:40.332  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-19 12:39:40.333  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Started LivariaApiApplication in 1.012 seconds (JVM running for 459.067)
+2020-12-19 12:39:40.336  INFO 24736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-19 12:39:48.896  INFO 24736 --- [Thread-37] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-12-19 12:39:48.899  INFO 24736 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:39:48.902  INFO 24736 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:39:48.903  INFO 24736 --- [Thread-37] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-12-19 12:39:49.108  WARN 24736 --- [Thread-37] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-12-19 12:39:49.108  INFO 24736 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-12-19 12:39:49.110  INFO 24736 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-12-19 12:39:49.661  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Starting LivariaApiApplication on DESKTOP-5370L5E with PID 24736 (C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api\target\classes started by Estudo in C:\Users\Estudo\Documents\workspace-spring-tool\livaria-api)
+2020-12-19 12:39:49.662  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : No active profile set, falling back to default profiles: default
+2020-12-19 12:39:50.227  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-19 12:39:50.254  INFO 24736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 2 JPA repository interfaces.
+2020-12-19 12:39:50.390  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-19 12:39:50.390  INFO 24736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-19 12:39:50.391  INFO 24736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-19 12:39:50.416  INFO 24736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-19 12:39:50.417  INFO 24736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 750 ms
+2020-12-19 12:39:50.476  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-12-19 12:39:50.477  INFO 24736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-12-19 12:39:50.478  INFO 24736 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-12-19 12:39:50.541  INFO 24736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-19 12:39:50.546  INFO 24736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-12-19 12:39:50.589  INFO 24736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-19 12:39:50.589  INFO 24736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-19 12:39:50.602  INFO 24736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-12-19 12:39:50.755  WARN 24736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-19 12:39:50.842  INFO 24736 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-12-19 12:39:50.908  INFO 24736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-19 12:39:50.970  INFO 24736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-12-19 12:39:51.004  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-12-19 12:39:51.004  INFO 24736 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-12-19 12:39:51.007  INFO 24736 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-12-19 12:39:51.054  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-12-19 12:39:51.058  INFO 24736 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findUsingGET_1
+2020-12-19 12:39:51.071  INFO 24736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-19 12:39:51.072  INFO 24736 --- [restartedMain] c.g.livariaapi.LivariaApiApplication     : Started LivariaApiApplication in 1.45 seconds (JVM running for 469.805)
+2020-12-19 12:39:51.075  INFO 24736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-12-19 12:40:34.434  INFO 24736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-19 12:40:34.435  INFO 24736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'

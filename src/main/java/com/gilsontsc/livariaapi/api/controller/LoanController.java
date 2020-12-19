@@ -33,11 +33,13 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("api/loans")
 @RequiredArgsConstructor
 @Api("Empréstimo API")
+@Slf4j
 public class LoanController {
 
 	private final LoanService service;
@@ -53,6 +55,8 @@ public class LoanController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
     public Long create(@RequestBody LoanDTO dto) {
+    	log.info("Criando empréstimo: " + dto.getIsbn());
+    	
         Book book = bookService
                 .getBookByIsbn(dto.getIsbn())
                 .orElseThrow(() ->
@@ -68,7 +72,7 @@ public class LoanController {
     }
     
     @PatchMapping("{id}")
-    @ApiOperation("Atualizar emp´restimo por id")
+    @ApiOperation("Atualizar empréstimo por id")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "Ok"),
 		@ApiResponse(code = 204, message = "Atualizado"),
@@ -76,6 +80,8 @@ public class LoanController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
     public void returnBook(@PathVariable Long id, @RequestBody ReturnedLoanDTO dto) {
+    	log.info("Atualizar empréstimo com id: " + id);
+    	
         Loan loan = service.getById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
         loan.setReturned(dto.getReturned());
         service.update(loan);
@@ -89,6 +95,8 @@ public class LoanController {
 		@ApiResponse(code = 403, message = "Acesso negado")
 	})
     public Page<LoanDTO> find(LoanFilterDTO dto, Pageable pageRequest) {
+    	log.info("Buscando empréstimo com o isbn: " + dto.getIsbn());
+    	
         Page<Loan> result = service.find(dto, pageRequest);
         List<LoanDTO> loans = result
                 .getContent()
