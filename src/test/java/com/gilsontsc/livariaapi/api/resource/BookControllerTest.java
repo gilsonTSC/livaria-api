@@ -35,6 +35,7 @@ import com.gilsontsc.livariaapi.api.dto.BookDTO;
 import com.gilsontsc.livariaapi.exception.BusinessException;
 import com.gilsontsc.livariaapi.model.entity.Book;
 import com.gilsontsc.livariaapi.service.BookService;
+import com.gilsontsc.livariaapi.service.LoanService;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
@@ -49,6 +50,9 @@ public class BookControllerTest {
 	
 	@MockBean
 	BookService service;
+	
+	@MockBean
+	LoanService loanService;
 	
 	@Test
 	@DisplayName("Deve criar um livro com sucesso.")
